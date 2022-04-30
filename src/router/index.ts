@@ -1,4 +1,4 @@
-import {createMemoryHistory, createRouter, RouteRecordRaw }  from 'vue-router'
+import {createWebHistory, createRouter, RouteRecordRaw }  from 'vue-router'
 import Home from '../view/Home.vue'
 import Container from '../container/src/index.vue'
 
@@ -10,20 +10,25 @@ const routes: RouteRecordRaw[] = [
     children: [
       {
         path: '/',
-        component: () => import('../view/choose.vue')
+        component: Home
       },
       {
-        path: '/home',
+        path: '/chooseIcon',
+        component: () => import('../view/choose.vue')
+        // component: Home
+      },
+      {
+        path: '/chooseArea',
         // component: () => import('../view/choose.vue')
-        component: Home
-      }
+        component: () => import("../view/choseArea.vue")
+      },
     ]
   }
 ]
 
 const router = createRouter({
   routes,
-  history: createMemoryHistory()
+  history: createWebHistory()
 })
 
 
