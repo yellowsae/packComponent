@@ -25,9 +25,9 @@
 
 <script setup lang="ts">
 import * as ElIcons from "@element-plus/icons-vue"
-import { toLine } from "../../utils/index"
+import { toLine } from "../../../utils"
 import { watch } from 'vue'
-import { useCopy } from "../../hooks/useCopy";
+import { useCopy } from "../../../hooks/useCopy";
 
 
 // 父组件传值

@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import ChooseIcon from "../chooseIcon/src/index.vue"
+import ChooseIcon from "../components/chooseIcon/src/index.vue"
 import { ref } from 'vue'
 
 

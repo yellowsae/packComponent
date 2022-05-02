@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import allArea from '../lib/pac-code.json'
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 // 拷贝数据
 const areas = ref(allArea)
 
@@ -46,6 +46,12 @@ const selectArea = computed(() => {
     const area = selectCity.value?.find(item => item.name === city.value)?.children
     return area
   }
+})
+
+// 监听选择区域
+
+watch(() => area.value, value => {
+  console.log(province.value, city.value, value)
 })
 </script>
 

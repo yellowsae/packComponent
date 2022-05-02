@@ -6,7 +6,7 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 // 引入图标组件 
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
-
+import mUI from './components'
 
 
 
@@ -18,5 +18,5 @@ for (let i in ElementPlusIconsVue) {
 }
 
 
-app.use(router).use(ElementPlus)
+app.use(router).use(ElementPlus).use(mUI)
 app.mount('#app')
